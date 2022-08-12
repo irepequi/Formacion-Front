@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200i,400&display=swap');
+
+
+@media (min-width: 576px) {
+    main {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 480px) {
+    form {
+        padding: 2.5rem;
+    }
+}
+
+
+/* VARIABLES ---------------------------------------------- */
+:root {
+    --color-white: #ffffff;
+    --color-primary: #6aa3b4;
+    --color-primary-alpha: rgba(0, 89, 84, 0.8);
+    --color-secondary: #00c6ab;
+    --color-secondary-alpha-dark:  rgba(0, 151, 127, 0.8);
+    --color-secondary-alpha-light:  rgba(156, 224, 219, 0.8);
+    --color-terciary: #568fb9;
+    --color-inputText: #495057;
+    --color-inputBorder:#ced4da;
+    --color-button: #568fb9;
+}
+
+
+/* ESTILOS GENERALES ---------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--color-white);
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+}
+
+p {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* BACKGROUND */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-secondary);
+    background-image: linear-gradient(
+        115deg,
+        var(--color-secondary-alpha-dark),
+        var(--color-secondary-alpha-light)
+        ),
+        url(https://images.unsplash.com/photo-1629905679177-4c4e2623654f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+}
+
+/* HEADER ----------------------------------------------------------- */
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+h1, #description {
+    text-align: center;
+}
+
+#description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* FORM -----------------------------------------------------------  */
+form {
+    background: var(--color-primary-alpha);
+    border-radius: 0.25rem;
+    margin-bottom: 5rem;
+}
+
+/* CLASE GRUPO INPUT */
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+
+/* CLASE INPUT */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.3rem;
+    padding: 0.3rem 0.75rem;
+    color: var( --color-inputText);
+    background-color: var(--color-white);
+    background-clip: padding-box;
+    border: 1px solid var(--color-inputBorder);
+    border-radius: 0.25rem;
+    transition: 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    outline: 0;
+    border-color: var(--color-terciary);
+    box-shadow: 0 0 0 0.2rem var(--color-terciary);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+/* ESTILO PARA ACLARACIONES DEL TEXTO */
+.clue {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+    color: #e4e4e4;
+}
+  
+/* ESTILO DENTRO INPUT */
+input, button, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* ESTILOS INPUT RADIO, CHECKBOX Y TEXTAREA*/
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+}
+
+.input-textarea {
+    width: 100%;
+    padding: 0.625rem;
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ESTILO BOTON SUBMIT */
+.submit-button {
+    display: block;
+    padding: 0.75rem;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    background: var(--color-button);
+    color: inherit;
+    cursor: pointer;
+}
